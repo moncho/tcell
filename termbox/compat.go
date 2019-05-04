@@ -25,6 +25,12 @@ import (
 var screen tcell.Screen
 var outMode OutputMode
 
+func InitWithScreen(s tcell.Screen) error {
+	outMode = OutputNormal
+	screen = s
+	return nil
+}
+
 // Init initializes the screen for use.
 func Init() error {
 	outMode = OutputNormal
